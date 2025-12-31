@@ -125,6 +125,24 @@
             .logo-text { font-size: 1rem; }
             .blackhole { width: 150px; height: 150px; }
             .cosmic-grid { grid-template-columns: 1fr; }
+            .lumen-grid-2 { grid-template-columns: 1fr !important; }
+            .lumen-stats-4 { grid-template-columns: 1fr 1fr !important; }
+            .lumen-card-title { font-size: 1.5rem !important; }
+            .lumen-planet { font-size: 3rem !important; }
+            .lumen-percent { font-size: 2rem !important; }
+        }
+        @media (max-width: 768px) {
+            .lumen-logo-wrap { width: 8rem; height: 8rem; }
+            .lumen-title { font-size: 2.5rem; }
+            .lumen-subtitle { font-size: 1.25rem; }
+            .nebula-stake-btn { font-size: 1.2rem; padding: 1.2rem 2rem; }
+            .blackhole { width: 180px; height: 180px; }
+            .lumen-grid-2 { grid-template-columns: 1fr; }
+            .lumen-card-padding { padding: 2rem !important; }
+        }
+        @media (max-width: 1024px) {
+            .container { padding: 2rem 1rem; }
+            .lumen-stats-4 { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -315,48 +333,53 @@
                                 <div class="lumen-logo-wrap">
                                     <img src="${LUMEN_LOGO}" alt="Lumen Network" class="lumen-logo">
                                 </div>
-                                <h1 class="lumen-title">✨ LUMEN NETWORK 🌌</h1>
-                                <p class="lumen-subtitle">Illuminating the Cosmos of Decentralization</p>
-                                <p class="lumen-desc">
-                                    Journey through the cosmos with our stellar validator! We harness the power of distant galaxies 
-                                    to secure the Lumen Network. Experience validation that transcends dimensions.
-                                </p>
+                                <h1 class="lumen-title">LUMEN NETWORK</h1>
+                                <p class="lumen-subtitle">⭐ Cosmic Validator Protocol ⭐</p>
                             </div>
 
-                            <a href="https://explorer.chaintools.tech/lumen/staking/lmnvaloper15fpv5dnc0s6ln5nepum4372kyml4ukr6lu6zw8" 
-                               target="_blank" class="nebula-stake-btn">
-                                🌟 Stake in the Stars
-                            </a>
+                            <div class="lumen-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem; align-items: center;">
+                                <div class="lumen-card-padding" style="backdrop-filter: blur(16px); background: linear-gradient(135deg, rgba(138,43,226,0.15), rgba(75,0,130,0.2)); border: 2px solid rgba(138,43,226,0.4); border-radius: 2rem; padding: 3rem; box-shadow: 0 10px 40px rgba(138,43,226,0.3);">
+                                    <h2 class="lumen-card-title" style="font-size: 2rem; font-weight: bold; color: #ba68c8; margin-bottom: 1.5rem; text-shadow: 0 0 15px rgba(186,104,200,0.6);">🌌 Intergalactic Node</h2>
+                                    <p style="color: rgba(186,104,200,0.85); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem;">
+                                        Our validator nodes orbit across multiple dimensions, ensuring your stake travels through 
+                                        the safest cosmic pathways. Protected by antimatter shields and quantum encryption.
+                                    </p>
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <span style="background: rgba(138,43,226,0.3); padding: 0.5rem 1rem; border-radius: 9999px; color: #ba68c8; font-size: 0.9rem; border: 1px solid rgba(186,104,200,0.4);">🚀 Warp Speed</span>
+                                        <span style="background: rgba(138,43,226,0.3); padding: 0.5rem 1rem; border-radius: 9999px; color: #ba68c8; font-size: 0.9rem; border: 1px solid rgba(186,104,200,0.4);">🛡️ Quantum Safe</span>
+                                        <span style="background: rgba(138,43,226,0.3); padding: 0.5rem 1rem; border-radius: 9999px; color: #ba68c8; font-size: 0.9rem; border: 1px solid rgba(186,104,200,0.4);">♾️ Infinite Uptime</span>
+                                    </div>
+                                </div>
 
-                            <div class="cosmic-grid">
-                                <div class="cosmic-card">
-                                    <span class="cosmic-icon">🌠</span>
-                                    <h3 class="cosmic-card-title">Cosmic Speed</h3>
-                                    <p class="cosmic-card-desc">Faster than light block propagation across the network</p>
-                                </div>
-                                <div class="cosmic-card">
-                                    <span class="cosmic-icon">🪐</span>
-                                    <h3 class="cosmic-card-title">Planetary Security</h3>
-                                    <p class="cosmic-card-desc">Protected by the gravity of advanced cryptography</p>
-                                </div>
-                                <div class="cosmic-card">
-                                    <span class="cosmic-icon">⭐</span>
-                                    <h3 class="cosmic-card-title">Stellar Rewards</h3>
-                                    <p class="cosmic-card-desc">Astronomical returns for our loyal stakers</p>
-                                </div>
-                                <div class="cosmic-card">
-                                    <span class="cosmic-icon">🌌</span>
-                                    <h3 class="cosmic-card-title">Galactic Uptime</h3>
-                                    <p class="cosmic-card-desc">Never-ending service like the eternal universe</p>
+                                <div class="lumen-card-padding" style="backdrop-filter: blur(16px); background: linear-gradient(135deg, rgba(75,0,130,0.2), rgba(138,43,226,0.15)); border: 2px solid rgba(138,43,226,0.4); border-radius: 2rem; padding: 3rem; box-shadow: 0 10px 40px rgba(138,43,226,0.3);">
+                                    <h2 class="lumen-card-title" style="font-size: 2rem; font-weight: bold; color: #ba68c8; margin-bottom: 1.5rem; text-shadow: 0 0 15px rgba(186,104,200,0.6);">💫 Stellar Rewards</h2>
+                                    <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 1.5rem;">
+                                        <div class="lumen-planet" style="font-size: 5rem;">🪐</div>
+                                        <div>
+                                            <div class="lumen-percent" style="font-size: 3rem; font-weight: bold; color: #ba68c8; text-shadow: 0 0 20px rgba(186,104,200,0.7);">5%</div>
+                                            <div style="color: rgba(186,104,200,0.7); font-size: 1.1rem;">Commission Rate</div>
+                                        </div>
+                                    </div>
+                                    <p style="color: rgba(186,104,200,0.85); line-height: 1.8; font-size: 1.05rem;">
+                                        Harvest cosmic energy rewards while your tokens orbit our validator. 
+                                        Join thousands of stakers exploring the Lumen universe.
+                                    </p>
                                 </div>
                             </div>
 
-                            <div class="galaxy-info">
-                                <div class="galaxy-header">
-                                    <div class="galaxy-icon">🔐</div>
+                            <div style="text-align: center; margin-bottom: 4rem;">
+                                <a href="https://explorer.chaintools.tech/lumen/staking/lmnvaloper15fpv5dnc0s6ln5nepum4372kyml4ukr6lu6zw8" 
+                                   target="_blank" class="nebula-stake-btn">
+                                    🌟 ENTER THE COSMOS 🌟
+                                </a>
+                            </div>
+
+                            <div style="backdrop-filter: blur(16px); background: linear-gradient(to right, rgba(75,0,130,0.15), rgba(138,43,226,0.2), rgba(75,0,130,0.15)); border: 2px solid rgba(138,43,226,0.35); border-radius: 2rem; padding: 2.5rem; margin-bottom: 3rem; box-shadow: 0 8px 32px rgba(138,43,226,0.25);">
+                                <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                                    <div style="font-size: 4rem; filter: drop-shadow(0 0 20px rgba(138,43,226,0.8));">🔮</div>
                                     <div>
-                                        <h3 class="galaxy-title">Validator Portal</h3>
-                                        <p class="galaxy-subtitle">Your Gateway to the Cosmos</p>
+                                        <h3 style="font-size: 2rem; font-weight: bold; color: #ba68c8; text-shadow: 0 0 15px rgba(186,104,200,0.5);">Validator Coordinates</h3>
+                                        <p style="color: rgba(186,104,200,0.7); font-size: 1.1rem;">Lock onto our cosmic signal</p>
                                     </div>
                                 </div>
                                 <div class="cosmos-address-box">
@@ -364,22 +387,26 @@
                                 </div>
                             </div>
 
-                            <div class="universe-stats">
+                            <div class="lumen-stats-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
                                 <div class="universe-stat">
-                                    <div class="universe-stat-label">🎯 Uptime</div>
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 15px rgba(138,43,226,0.7));">🌟</div>
                                     <div class="universe-stat-value">99.9%</div>
+                                    <div class="universe-stat-label">Stellar Uptime</div>
                                 </div>
                                 <div class="universe-stat">
-                                    <div class="universe-stat-label">💫 Commission</div>
-                                    <div class="universe-stat-value">5%</div>
-                                </div>
-                                <div class="universe-stat">
-                                    <div class="universe-stat-label">⚡ Status</div>
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 15px rgba(138,43,226,0.7));">⚡</div>
                                     <div class="universe-stat-value">Active</div>
+                                    <div class="universe-stat-label">Node Status</div>
                                 </div>
                                 <div class="universe-stat">
-                                    <div class="universe-stat-label">🌐 Network</div>
-                                    <div class="universe-stat-value">Lumen</div>
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 15px rgba(138,43,226,0.7));">🛸</div>
+                                    <div class="universe-stat-value">Multi</div>
+                                    <div class="universe-stat-label">Data Centers</div>
+                                </div>
+                                <div class="universe-stat">
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 15px rgba(138,43,226,0.7));">🌍</div>
+                                    <div class="universe-stat-value">24/7</div>
+                                    <div class="universe-stat-label">Monitoring</div>
                                 </div>
                             </div>
                         </div>
