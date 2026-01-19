@@ -10,18 +10,27 @@
         .app { min-height: 100vh; background: linear-gradient(to bottom right, #020617, #581c87, #020617); color: white; position: relative; }
         .nav { position: relative; z-index: 50; border-bottom: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); background: rgba(0,0,0,0.2); }
         .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: flex-start; height: 4.5rem; }
-        .logo-btn { display: flex; align-items: center; gap: 1rem; background: none; border: none; cursor: pointer; }
+        .logo-btn { display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; transition: transform 0.3s; }
+        .logo-btn:hover { transform: scale(1.05); }
         .logo-icon { width: 5.5rem; height: 5.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 4px 12px rgba(168,85,247,0.4)); }
-        .logo-text { font-size: 2rem; font-weight: bold; background: linear-gradient(135deg, #c084fc, #f9a8d4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text { font-size: 1.85rem; font-weight: 800; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #ef4444 50%, #dc2626 75%, #fb923c 100%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: 0.03em; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; text-transform: uppercase; animation: fireFlow 3s ease infinite; filter: drop-shadow(0 0 15px rgba(251,191,36,0.7)) drop-shadow(0 0 25px rgba(239,68,68,0.5)); }
+        @keyframes fireFlow { 
+            0%, 100% { 
+                background-position: 0% center; 
+                filter: drop-shadow(0 0 15px rgba(251,191,36,0.7)) drop-shadow(0 0 25px rgba(239,68,68,0.5)); 
+            } 
+            50% { 
+                background-position: 100% center; 
+                filter: drop-shadow(0 0 20px rgba(239,68,68,0.8)) drop-shadow(0 0 30px rgba(251,191,36,0.6)); 
+            } 
+        }
         .container { position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
         .hero { text-align: center; margin-bottom: 3rem; }
         .hero-icon { width: 26rem; height: 26rem; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; position: relative; animation: float 3s ease-in-out infinite; max-width: 95vw; max-height: 95vw; }
         .hero-icon img { width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 1; display: block; filter: drop-shadow(0 25px 50px rgba(168,85,247,0.5)) drop-shadow(0 0 80px rgba(168,85,247,0.4)); }
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        .hero-title { font-size: 3.5rem; font-weight: bold; margin-bottom: 1rem; background: linear-gradient(135deg, #fff 0%, #e9d5ff 25%, #f9a8d4 50%, #e9d5ff 75%, #fff 100%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; position: relative; animation: gradientShift 4s ease infinite, textGlow 2s ease-in-out infinite; letter-spacing: -0.02em; word-wrap: break-word; }
-        @keyframes gradientShift { 0%, 100% { background-position: 0% center; } 50% { background-position: 100% center; } }
-        @keyframes textGlow { 0%, 100% { filter: drop-shadow(0 0 15px rgba(192,132,252,0.6)) drop-shadow(0 0 30px rgba(236,72,153,0.4)); } 50% { filter: drop-shadow(0 0 25px rgba(236,72,153,0.8)) drop-shadow(0 0 40px rgba(192,132,252,0.6)); } }
+        .hero-title { font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #ef4444 50%, #dc2626 75%, #fb923c 100%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; position: relative; animation: fireFlow 3s ease infinite; letter-spacing: 0.03em; word-wrap: break-word; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; text-transform: uppercase; }
         .hero-subtitle { font-size: 1.5rem; color: #d8b4fe; margin-bottom: 1rem; font-weight: 600; word-wrap: break-word; }
         .hero-desc { color: #d1d5db; max-width: 42rem; margin: 0 auto; line-height: 1.75; padding: 0 1rem; }
         .card { backdrop-filter: blur(12px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; padding: 2.5rem; margin-bottom: 2rem; overflow-wrap: break-word; }
@@ -34,9 +43,6 @@
         .network-item:hover { background: rgba(255,255,255,0.08); border-color: rgba(168,85,247,0.4); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(168,85,247,0.3); }
         .network-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
         .network-logo { width: 3rem; height: 3rem; border-radius: 0.75rem; object-fit: contain; background: rgba(255,255,255,0.05); padding: 0.4rem; display: block; }
-        img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
-        img[src] { opacity: 0; transition: opacity 0.3s ease-in; }
-        img[src].loaded { opacity: 1; }
         .network-name { font-size: 1.25rem; font-weight: 600; color: #e9d5ff; }
         .network-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
         .network-info { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -49,13 +55,17 @@
         .feature:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
         .feature h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
         .feature p { color: #d1d5db; }
+        img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+        img[src] { opacity: 0; transition: opacity 0.3s ease-in; }
+        img[src].loaded { opacity: 1; }
         
         @media (max-width: 640px) {
             .hero-title { font-size: 2rem; }
             .hero-icon { width: 16rem; height: 16rem; }
             .networks-grid { grid-template-columns: 1fr; }
             .logo-icon { width: 3.5rem; height: 3.5rem; }
-            .logo-text { font-size: 1.3rem; }
+            .logo-text { font-size: 1.2rem; }
+            .logo-btn { gap: 0.4rem; }
             .container { padding: 2rem 1rem; }
             .card { padding: 1.5rem; }
             .networks-section { padding: 1.5rem; }
@@ -66,7 +76,8 @@
             .hero-title { font-size: 2.5rem; }
             .hero-icon { width: 19rem; height: 19rem; }
             .logo-icon { width: 4.5rem; height: 4.5rem; }
-            .logo-text { font-size: 1.6rem; }
+            .logo-text { font-size: 1.5rem; }
+            .logo-btn { gap: 0.45rem; }
             .networks-grid { grid-template-columns: 1fr; }
             .nav-content { height: 4rem; }
         }
@@ -74,7 +85,7 @@
             .hero-title { font-size: 3rem; }
             .hero-icon { width: 22rem; height: 22rem; }
             .logo-icon { width: 5rem; height: 5rem; }
-            .logo-text { font-size: 1.8rem; }
+            .logo-text { font-size: 1.7rem; }
             .networks-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
         }
         @media (min-width: 1025px) {
@@ -86,7 +97,8 @@
             .hero-desc { font-size: 0.95rem; }
             .hero-icon { width: 14rem; height: 14rem; }
             .logo-icon { width: 3rem; height: 3rem; }
-            .logo-text { font-size: 1.1rem; }
+            .logo-text { font-size: 1.05rem; }
+            .logo-btn { gap: 0.35rem; }
             .nav-content { padding: 0 1rem; height: 3.25rem; }
             .card-title { font-size: 1.5rem; }
             .section-title { font-size: 1.5rem; }
