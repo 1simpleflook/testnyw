@@ -9,11 +9,11 @@
         body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
         .app { min-height: 100vh; background: linear-gradient(to bottom right, #020617, #581c87, #020617); color: white; position: relative; }
         .nav { position: relative; z-index: 50; border-bottom: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); background: rgba(0,0,0,0.2); }
-        .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: center; height: 3.5rem; }
+        .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: flex-start; height: 3.5rem; }
         .logo-btn { display: flex; align-items: center; gap: 0.75rem; background: none; border: none; cursor: pointer; }
-        .logo-icon { width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.2)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; padding: 0.35rem; backdrop-filter: blur(8px); border: 1px solid rgba(168,85,247,0.3); }
-        .logo-icon img { width: 100%; height: 100%; object-fit: contain; border-radius: 0.75rem; display: block; }
-        .logo-icon img::before { content: ''; display: block; width: 100%; height: 100%; background: rgba(168,85,247,0.2); border-radius: 0.75rem; }
+        .logo-icon { width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.2)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; backdrop-filter: blur(8px); border: 1px solid rgba(168,85,247,0.3); flex-shrink: 0; }
+        .logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .logo-icon img::before { content: ''; display: block; width: 100%; height: 100%; background: rgba(168,85,247,0.2); }
         .logo-text { font-size: 1.25rem; font-weight: bold; background: linear-gradient(135deg, #c084fc, #f9a8d4); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .container { position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
         .hero { text-align: center; margin-bottom: 3rem; }
@@ -67,7 +67,7 @@
             <div class="nav-content">
                 <div class="logo-btn">
                     <div class="logo-icon">
-                        <img src="https://raw.githubusercontent.com/1simpleflook/valmain/refs/heads/main/images/clg.png" alt="Core Logo" loading="eager">
+                        <img src="https://raw.githubusercontent.com/1simpleflook/valmain/refs/heads/main/images/core-logo.PNG" alt="Core Logo" loading="eager">
                     </div>
                     <span class="logo-text">0x94alwaydecen</span>
                 </div>
@@ -77,7 +77,7 @@
         <div class="container">
             <div class="hero">
                 <div class="hero-icon">
-                    <img src="https://raw.githubusercontent.com/1simpleflook/valmain/refs/heads/main/images/clg.png" alt="Core Logo" loading="eager">
+                    <img src="https://raw.githubusercontent.com/1simpleflook/valmain/refs/heads/main/images/core-logo.PNG" alt="Core Logo" loading="eager">
                 </div>
                 <h1 class="hero-title">0x94alwaydecen</h1>
                 <p class="hero-subtitle">Proof-of-Stake Validator</p>
